@@ -1,0 +1,49 @@
+---
+interface Props{
+    title:string,
+    sub:string,
+    iconName:string
+}
+const { title, sub, iconName } = Astro.props;
+
+// Mapping icons to your JSON 'icon' string
+const IconMap = {
+  Home: `<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>`,
+  Building2: `<rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M8 10h.01"/><path d="M16 10h.01"/><path d="M8 14h.01"/><path d="M16 14h.01"/>`,
+  Hammer: `<path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6l-.85.85c-.83.83-1.64 1.25-2.25.93L11.66 5.13l-4.25 4.25 4.23 4.22 3.92-3.92 5.35 5.35a2.41 2.41 0 0 0 3.4 0l1.24-1.24a2.4 2.4 0 0 0 0-3.41Z"/>`,
+  ClipboardList: `<rect width="16" height="18" x="4" y="4" rx="2"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M8 10h8"/><path d="M8 14h8"/><path d="M8 18h5"/>`
+};
+
+const iconPath = IconMap[iconName as keyof typeof IconMap] || IconMap.Home;
+---
+
+<div data-aos="fade-left" class="group relative p-6 bg-slate-800/40 backdrop-blur-md border border-white/5 rounded-xl overflow-hidden transition-all! duration-500 hover:bg-slate-800/80 hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/10">
+    
+    <div class="absolute top-0 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-1000 group-hover:w-full"></div>
+
+    <div class="relative z-10 flex flex-col h-full">
+        <div class="flex gap-4 items-center">
+            <div class="p-2 rounded-lg bg-white/5 text-white group-hover:text-amber-400 group-hover:bg-amber-400/10 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <Fragment set:html={iconPath} />
+                </svg>
+            </div>
+            <h2 class="text-xl font-heading font-bold tracking-tight text-white group-hover:text-amber-500 transition-colors">
+                {title}
+            </h2>            
+        </div>
+
+        <div class="w-full h-px bg-linear-to-r from-white/20 via-white/5 to-transparent my-5"></div>
+
+        <div class="text-gray-400 font-sans leading-relaxed group-hover:text-gray-200 transition-colors">
+            {sub}
+        </div>
+
+        <div class="mt-auto pt-6 flex justify-end opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+            <span class="text-amber-400 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+                Learn More
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            </span>
+        </div>
+    </div>
+</div>

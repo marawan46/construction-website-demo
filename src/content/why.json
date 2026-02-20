@@ -1,0 +1,20 @@
+{
+  "en": {
+    "whyus": [
+      { "feat": "10+ Years of Experience", "icon": "Experience" },
+      { "feat": "Licensed & Insured", "icon": "Shield" },
+      { "feat": "Skilled Team of Experts", "icon": "Users" },
+      { "feat": "High-Quality Materials", "icon": "Home" },
+      { "feat": "On-Time Delivery", "icon": "Clock" }
+    ]
+  },
+  "ar": {
+    "whyus": [
+      { "feat": "+١٠ سنوات من الخبرة", "icon": "Experience" },
+      { "feat": "مرخص ومؤمن عليه", "icon": "Shield" },
+      { "feat": "فريق ماهر من الخبراء", "icon": "Users" },
+      { "feat": "مواد عالية الجودة", "icon": "Home" },
+      { "feat": "التسليم في الوقت المحدد", "icon": "Clock" }
+    ]
+  }
+}

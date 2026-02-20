@@ -1,0 +1,58 @@
+{
+  "en": {
+    "services": [
+      {
+        "id": 1,
+        "icon": "Home",
+        "title": "Residential Construction",
+        "sub": "New home builds & custom"
+      },
+      {
+        "id": 2,
+        "icon": "Building2",
+        "title": "Commercial Buildings",
+        "sub": "Office, retail & industrial projects"
+      },
+      {
+        "id": 3,
+        "icon": "Hammer",
+        "title": "Renovation & Remodeling",
+        "sub": "Home & commercial renovations"
+      },
+      {
+        "id": 4,
+        "icon": "ClipboardList",
+        "title": "Project Management",
+        "sub": "Planning & supervision"
+      }
+    ]
+  },
+  "ar": {
+    "services": [
+      {
+        "id": 1,
+        "icon": "Home",
+        "title": "البناء السكني",
+        "sub": "بناء منازل جديدة وتصاميم مخصصة"
+      },
+      {
+        "id": 2,
+        "icon": "Building2",
+        "title": "المباني التجارية",
+        "sub": "مشاريع المكاتب والتجزئة والمشاريع الصناعية"
+      },
+      {
+        "id": 3,
+        "icon": "Hammer",
+        "title": "الترميم وإعادة الهيكلة",
+        "sub": "ترميم المنازل والمنشآت التجارية"
+      },
+      {
+        "id": 4,
+        "icon": "ClipboardList",
+        "title": "إدارة المشاريع",
+        "sub": "التخطيط والإشراف العام"
+      }
+    ]
+  }
+}

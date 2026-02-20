@@ -1,0 +1,38 @@
+{
+  "en": {
+    "testimonials": [
+      {
+        "id": 1,
+        "name": "Ahmed Mansour",
+        "role": "CEO, Tech Hub",
+        "quote": "They delivered our office complex ahead of schedule. The attention to detail in the steel structure was masterful.",
+        "image": "clients/c1.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Sarah Jalal",
+        "role": "Home Owner",
+        "quote": "Building my dream home was stress-free. Their engineering team explained every step of the process clearly.",
+        "image": "clients/c2.jpg"
+      }
+    ]
+  },
+  "ar": {
+    "testimonials": [
+      {
+        "id": 1,
+        "name": "أحمد منصور",
+        "role": "المدير التنفيذي، تيك هب",
+        "quote": "قاموا بتسليم مجمع مكاتبنا قبل الجدول الزمني المحدد. الاهتمام بالتفاصيل في الهيكل الفولاذي كان احترافياً للغاية.",
+        "image": "/clients/c1.jpg"
+      },
+      {
+        "id": 2,
+        "name": "سارة جلال",
+        "role": "مالكة منزل",
+        "quote": "بناء منزل أحلامي كان تجربة خالية من التوتر. فريقهم الهندسي شرح كل خطوة في العملية بوضوح تام.",
+        "image": "/clients/c2.jpg"
+      }
+    ]
+  }
+}

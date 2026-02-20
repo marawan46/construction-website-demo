@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+
+---
+
+<footer class="footer footer-horizontal footer-center bg-slate-800 text-primary-content p-10">
+  <aside>
+        <img alt="logo image" src='logo.svg' height="100" width="100" />
+    <p class="font-bold">
+      MM Builds .co
+      <br />
+      Providing Construction Services since 2000
+    </p>
+    <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+  </aside>
+  <nav>
+    <div class="grid grid-flow-col gap-4">
+      <a class="underline" href="#Contact">
+        Get Free Quote
+      </a>
+      <a class="underline" href="#Services">
+        Our Services
+      </a>
+      <a class="underline" href="#Projects">
+        Projects
+      </a>
+    </div>
+  </nav>
+</footer>

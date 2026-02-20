@@ -1,0 +1,34 @@
+{
+  "en": {
+    "projects": [
+      {
+        "id": 1,
+        "title": "The Glass Pavilion",
+        "category": "Commercial",
+        "size": "large",
+        "image": "projects/p1.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Desert Oasis Villa",
+        "category": "Residential",
+        "size": "small",
+        "image": "projects/p2.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Industrial Sky-Hub",
+        "category": "Industrial",
+        "size": "small",
+        "image": "projects/p3.jpg"
+      }
+    ]
+  },
+  "ar": {
+    "projects": [
+      { "id": 1, "title": "جناح الزجاج", "category": "تجاري", "size": "large", "image": "projects/p4.jpg" },
+      { "id": 2, "title": "فيلا واحة الصحراء", "category": "سكني", "size": "small", "image": "projects/p5.jpg" },
+      { "id": 3, "title": "سكاي هب الصناعي", "category": "صناعي", "size": "small", "image": "projects/p3.jpg" }
+    ]
+  }
+}

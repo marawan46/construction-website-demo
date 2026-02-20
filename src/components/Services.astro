@@ -1,0 +1,24 @@
+---
+import { useTranslations } from "../i18n/ui";
+import ServiceCard from "./ui/ServiceCard.astro";
+// FIX: You must import the actual data, not just the path string
+import servicesData from '../content/Services.json';
+
+const lang = Astro.currentLocale as 'en' | 'ar';
+const dir = lang === 'en' ? 'ltr' : 'rtl';
+const t = useTranslations(lang);
+
+// This accesses the "en" or "ar" key inside your JSON
+const currentServices = servicesData[lang].services;
+---
+
+<section id="Services" class="flex flex-col relative z-10 bg-linear-to-t from-primary from-5% to-transparent to-95% gap-5 py-10 mt-5 m-auto md:scroll-mt-[10vh]">
+    <div class="container flex flex-col gap-8 max-w-10/12 m-auto">
+    <h1 class="text-4xl font-heading font-bold">Our Services</h1>
+    <div class="services-container grid grid-cols-1 gap-5 lg:gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {currentServices.map((s)=>{
+            return(<ServiceCard title={s.title} sub={s.sub} iconName={s.icon}/>)
+        })}
+    </div>
+    </div>
+</section>

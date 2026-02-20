@@ -1,0 +1,57 @@
+---
+import { Image } from 'astro:assets';
+import { useTranslations } from "../i18n/ui";
+import data from '../content/testimonials.json';
+
+const lang = Astro.currentLocale as 'en' | 'ar';
+const t = useTranslations(lang);
+const dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+const reviews = data[lang].testimonials;
+---
+
+<section id="Testimonial" dir={dir} class="bg-[#fcfcfc] py-12 px-4">
+  <div class="max-w-6xl mx-auto">
+    
+    <div class="flex items-center gap-3 mb-10">
+      <h2 class="text-xl md:text-2xl font-bold text-slate-800 uppercase tracking-tight">
+        {t('test.title') || 'What Our Clients Say'}
+      </h2>
+      <div class="h-px flex-1 bg-slate-200"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {reviews.map((item) => (
+        <div class="group bg-white p-6 rounded-sm shadow-sm border-s-4 border-amber-400 flex flex-col justify-between hover:shadow-md transition-all">
+          
+          <div>
+            <svg class="w-8 h-8 text-amber-100 mb-4 group-hover:text-amber-200 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21L14.017 18C14.017 16.899 14.899 16.017 16 16.017L19 16.017C19.552 16.017 20 15.569 20 15.017L20 9.017C20 8.465 19.552 8.017 19 8.017L15 8.017C14.448 8.017 14 7.569 14 7.017L14 4.017C14 3.465 14.448 3.017 15 3.017L21 3.017C21.552 3.017 22 3.465 22 4.017L22 15.017C22 18.33 19.33 21 16 21L14.017 21ZM2.017 21L2.017 18C2.017 16.899 2.899 16.017 4 16.017L7 16.017C7.552 16.017 8 15.569 8 15.017L8 9.017C8 8.465 7.552 8.017 7 8.017L3 8.017C2.448 8.017 2 7.569 2 7.017L2 4.017C2 3.465 2.448 3.017 3 3.017L9 3.017C9.552 3.017 10 3.465 10 4.017L10 15.017C10 18.33 7.33 21 4 21L2.017 21Z" />
+            </svg>
+            
+            <p class="text-slate-600 italic text-sm md:text-base leading-relaxed mb-6">
+              "{item.quote}"
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3 border-t border-slate-50 pt-4">
+            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-50">
+              <Image 
+                src={item.image} 
+                alt={item.name} 
+                width={56} 
+                height={56} 
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-800">{item.name}</h4>
+              <p class="text-xs text-slate-500">{item.role}</p>
+            </div>
+          </div>
+
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

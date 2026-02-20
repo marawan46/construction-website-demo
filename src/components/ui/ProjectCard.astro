@@ -1,0 +1,37 @@
+---
+const { title, category, image, size } = Astro.props;
+
+// Logic to handle different grid spans
+const spanClass = size === 'large' ? 'md:col-span-2 md:row-span-2' : 'col-span-1';
+---
+
+<div class={`group relative overflow-hidden rounded-2xl bg-slate-900 ${spanClass} aspect-square md:aspect-auto`}>
+    <img 
+        src={image} 
+        alt={title} 
+        class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1"
+    />
+
+    <div class="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+
+    <div class="absolute top-4 right-4 rtl:right-auto rtl:left-4">
+        <span class="bg-amber-400 text-slate-900 text-[10px] font-black uppercase px-3 py-1 rounded-full shadow-lg">
+            {category}
+        </span>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+        <div class="inline-block bg-white p-4 shadow-2xl mb-2 -ml-10 group-hover:ml-0 transition-all duration-500 rtl:-mr-10 rtl:group-hover:mr-0">
+            <h3 class="text-slate-900 font-bold text-xl md:text-2xl uppercase tracking-tighter">
+                {title}
+            </h3>
+        </div>
+        
+        <div class="flex items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity delay-200">
+            <div class="h-px w-12 bg-amber-400"></div>
+            <button class="text-white text-xs font-bold uppercase tracking-widest hover:text-amber-400 transition-colors">
+                View Project
+            </button>
+        </div>
+    </div>
+</div>

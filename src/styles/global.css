@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@plugin "daisyui"{
+  themes: light --default;
+}
+:root{
+    --color-primary:#fbbc04;
+}
+@theme {
+  /* تعريف الألوان الأساسية والثانوية */
+  --color-primary: #fbbc04;
+  --color-primary-light: #d2e3fc;
+  --color-primary-dark: #174ea6;
+
+  --color-secondary: ;
+  --color-secondary-light: #feefc3;
+  --color-secondary-dark: #f29900;
+  --color-hero: #0f172a;
+  /* تعريف الخطوط */
+  /* ملاحظة: 'Inter' للإنجليزية و 'Cairo' للعربية */
+  --font-sans: "Inter", "Cairo", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Cairo", "Inter", sans-serif;
+}
+ul{
+  scroll-target-group: auto; /* Activates scroll-spy behavior on the list */
+}
+:target-current {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+}
+/* تحسين إضافي: تحديد الخط الأساسي بناءً على اللغة لضمان أفضل رؤية */
+:lang(ar) {
+  font-family: var(--font-heading);
+}
+
+:lang(en) {
+  font-family: var(--font-sans);
+}

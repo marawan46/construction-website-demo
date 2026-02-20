@@ -1,0 +1,26 @@
+---
+import ProjectCard from "./ui/ProjectCard.astro";
+import projectData from '../content/projects.json'
+const lang = Astro.currentLocale as 'en' | 'ar';
+const projects = projectData[lang].projects;
+---
+
+<section id="Projects" class="py-20 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div>
+                <span class="text-amber-500 font-bold tracking-[0.3em] uppercase text-xs">Portofolio</span>
+                <h2 class="text-5xl font-black text-white mt-2 tracking-tighter">RECENT <span class="text-outline text-transparent" style="-webkit-text-stroke: 1px white;">WORKS</span></h2>
+            </div>
+            <a href="#" class="text-white border-b-2 border-amber-400 pb-1 font-bold hover:text-amber-400 transition-colors">
+                View All Projects
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px] md:auto-rows-[350px]">
+            {projects.map((p) => (
+                <ProjectCard {...p} />
+            ))}
+        </div>
+    </div>
+</section>
