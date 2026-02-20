@@ -20,13 +20,7 @@
   --font-sans: "Inter", "Cairo", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "Cairo", "Inter", sans-serif;
 }
-ul{
-  scroll-target-group: auto; /* Activates scroll-spy behavior on the list */
-}
-:target-current {
-  color: var(--color-primary);
-  border-bottom: 2px solid var(--color-primary);
-}
+
 /* تحسين إضافي: تحديد الخط الأساسي بناءً على اللغة لضمان أفضل رؤية */
 :lang(ar) {
   font-family: var(--font-heading);
