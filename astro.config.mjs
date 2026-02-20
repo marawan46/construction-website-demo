@@ -4,6 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 import react from '@astrojs/react';
 
+import vercel from '@astrojs/vercel';
+
 export default defineConfig({
   i18n: {
     defaultLocale: 'en',
@@ -22,4 +24,5 @@ export default defineConfig({
   },
 
   integrations: [react()],
+  adapter: vercel(),
 });

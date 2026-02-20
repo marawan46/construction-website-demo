@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
+    "@astrojs/vercel": "^9.0.4",
     "@lucide/astro": "^0.574.0",
     "@react-email/components": "^1.0.8",
     "@react-email/render": "^2.0.4",
