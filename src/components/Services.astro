@@ -2,7 +2,7 @@
 import { useTranslations } from "../i18n/ui";
 import ServiceCard from "./ui/ServiceCard.astro";
 // FIX: You must import the actual data, not just the path string
-import servicesData from '../content/Services.json';
+import servicesData from '../content/services.json';
 
 const lang = Astro.currentLocale as 'en' | 'ar';
 const dir = lang === 'en' ? 'ltr' : 'rtl';
